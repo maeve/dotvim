@@ -34,3 +34,9 @@ let mapleader=","
 map <leader>, :Files<cr>
 map <leader>b :Buffers<cr>
 map <leader>c :Commits<cr>
+
+" split window navigation
+nmap <leader><up> <c-w>k
+nmap <leader><down> <c-w>j
+nmap <leader><left> <c-w>h
+nmap <leader><right> <c-w>l
