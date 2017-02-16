@@ -19,6 +19,9 @@ command! -bang -nargs=* Rg
 Plug 'tpope/vim-vinegar'
 let g:netrw_liststyle = 3
 
+" git
+Plug 'tpope/vim-fugitive'
+
 call plug#end()
 
 
@@ -29,3 +32,5 @@ let mapleader=","
 
 " fuzzy find
 map <leader>, :Files<cr>
+map <leader>b :Buffers<cr>
+map <leader>c :Commits<cr>
