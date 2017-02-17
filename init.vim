@@ -22,6 +22,9 @@ let g:netrw_liststyle = 3
 " git
 Plug 'tpope/vim-fugitive'
 
+" rails
+Plug 'tpope/vim-rails'
+
 call plug#end()
 
 
