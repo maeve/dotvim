@@ -39,18 +39,29 @@ call plug#end()
 "
 
 " line numbers
-set number
-set numberwidth=3
+set number " display in the left gutter
+set numberwidth=4 " width of left gutter
+set ruler " display cursor position in status bar
 
-" do not wrap words
-set textwidth=0 
-set nowrap
+" wrapping
+set textwidth=0 " disable automatic wrapping in insert mode
+set nowrap " disable automatic wrapping in view mode
 
 " quiet please
-set visualbell 
+set visualbell
 
 " colors
 colorscheme vividchalk
+
+" show unwanted whitespace chars
+set listchars=tab:▷⋅,trail:·
+set list
+
+" tabs/indents should be 2 spaces
+set tabstop=2 " render tab chars as two spaces
+set softtabstop=2 " number of spaces that pressing tab counts for
+set expandtab " only insert spaces, never tab chars
+set shiftwidth=2 " indents (e.g. with '>') are two spaces
 
 "
 " Bindings
@@ -58,7 +69,7 @@ colorscheme vividchalk
 let mapleader=","
 
 " fuzzy find
-map <leader>, :Files<cr>
+map <leader>f :Files<cr>
 map <leader>b :Buffers<cr>
 map <leader>c :Commits<cr>
 
@@ -70,5 +81,5 @@ nmap <leader><right> <c-w>l
 
 " file explorer
 map <leader>d :e.<cr>
-map <leader>ds :Sexplore<cr>
+map <leader>dx :Sexplore<cr>
 map <leader>dv :Vexplore<cr>
