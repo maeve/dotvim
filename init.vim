@@ -22,6 +22,10 @@ let g:netrw_liststyle = 3
 " git
 Plug 'tpope/vim-fugitive'
 
+" linting
+Plug 'neomake/neomake'
+autocmd! BufWritePost * Neomake " run on every save
+
 " rails
 Plug 'tpope/vim-rails'
 
@@ -63,3 +67,8 @@ nmap <leader><up> <c-w>k
 nmap <leader><down> <c-w>j
 nmap <leader><left> <c-w>h
 nmap <leader><right> <c-w>l
+
+" file explorer
+map <leader>d :e.<cr>
+map <leader>ds :Sexplore<cr>
+map <leader>dv :Vexplore<cr>

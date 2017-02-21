@@ -41,4 +41,5 @@ For OS X.
 * File explorer: [netrw](http://www.vim.org/scripts/script.php?script_id=1075) with [vim-vinegar](https://github.com/tpope/vim-vinegar)
 * Git: [vim-fugitive](https://github.com/tpope/vim-fugitive)
 * Rails: [vim-rails](https://github.com/tpope/vim-rails)
-* Color schemes: [vim-vividchalk](https://github.com/tpope/vim-vividchalk)
+* Color scheme: [vim-vividchalk](https://github.com/tpope/vim-vividchalk)
+* Linting: [neomake](https://github.com/neomake/neomake)
