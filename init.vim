@@ -7,7 +7,7 @@ call plug#begin('~/.local/share/nvim/plugged')
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'junegunn/fzf.vim'
 
-" Use ripgrep instead of the silver searcher
+" Make fzf.vim use ripgrep instead of the silver searcher for :Ag
 command! -bang -nargs=* Rg
   \ call fzf#vim#grep(
   \   'rg --column --line-number --no-heading --color=always '.shellescape(<q-args>), 1,
@@ -25,8 +25,28 @@ Plug 'tpope/vim-fugitive'
 " rails
 Plug 'tpope/vim-rails'
 
+" colors
+Plug 'tpope/vim-vividchalk'
+
 call plug#end()
 
+"
+" Global
+"
+
+" line numbers
+set number
+set numberwidth=3
+
+" do not wrap words
+set textwidth=0 
+set nowrap
+
+" quiet please
+set visualbell 
+
+" colors
+colorscheme vividchalk
 
 "
 " Bindings
