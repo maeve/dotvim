@@ -36,8 +36,14 @@ Plug 'tpope/vim-vividchalk'
 Plug 'kassio/neoterm'
 let g:neoterm_repl_ruby = 'pry'
 
-" change surroundings
+" change surroundings (brackets, parens, quotes, etc)
 Plug 'tpope/vim-surround'
+
+" auto-close code blocks
+Plug 'tpope/vim-endwise'
+
+" auto-close paired punctuation (brackets, parens, quotes)
+Plug 'jiangmiao/auto-pairs'
 
 call plug#end()
 

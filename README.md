@@ -45,3 +45,5 @@ For OS X.
 * Linting: [neomake](https://github.com/neomake/neomake)
 * Terminal goodies: [neoterm](https://github.com/kassio/neoterm)
 * Surroundings: [vim-surround](https://github.com/tpope/vim-surround)
+* Auto-close programming constructs: [vim-endwise](https://github.com/tpope/vim/endwise)
+* Auto-close paired punctuation: [auto-pairs](https://github.com/jiangmiao/auto-pairs)
