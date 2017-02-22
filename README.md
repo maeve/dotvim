@@ -76,6 +76,7 @@ Although not strictly necessary to use this vim config, I prefer to use neovim w
 * Fuzzy find: [fzf](https://github.com/junegunn/fzf) with [fzf.vim](https://github.com/junegunn/fzf.vim)
 * File explorer: [netrw](http://www.vim.org/scripts/script.php?script_id=1075) with [vim-vinegar](https://github.com/tpope/vim-vinegar)
 * Git: [vim-fugitive](https://github.com/tpope/vim-fugitive)
+* Ruby: [vim-ruby](https://github.com/vim-ruby/vim-ruby)
 * Rails: [vim-rails](https://github.com/tpope/vim-rails)
 * Color scheme: [base16-vim](https://github.com/chriskempson/base16-vim)
 * Linting: [neomake](https://github.com/neomake/neomake)
