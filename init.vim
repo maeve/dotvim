@@ -106,12 +106,12 @@ noremap <leader>dv :Vexplore<cr>
 " exit terminal mode
 tnoremap <esc> <c-\><c-n>
 " show/hide last open terminal
-nnoremap <leader>tl :Ttoggle<cr>
+nnoremap <leader>ts :Ttoggle<cr>
 " clear terminal
 nnoremap <leader>tc :call neoterm#clear()<cr>
 " kills the current job (send a <c-c>)
 nnoremap <leader>tq :call neoterm#kill()<cr>
 " repl support
 nnoremap <leader>tf :TREPLSendFile<cr>
-nnoremap <leader>ts :TREPLSendLine<cr>
-vnoremap <leader>ts :TREPLSendSelection<cr>
+nnoremap <leader>te :TREPLSendLine<cr>
+vnoremap <leader>te :TREPLSendSelection<cr>
