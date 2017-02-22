@@ -36,6 +36,9 @@ Plug 'tpope/vim-vividchalk'
 Plug 'kassio/neoterm'
 let g:neoterm_repl_ruby = 'pry'
 
+" change surroundings
+Plug 'tpope/vim-surround'
+
 call plug#end()
 
 "
@@ -72,7 +75,7 @@ set shiftwidth=2 " indents (e.g. with '>') are two spaces
 let mapleader=","
 
 " fuzzy find
-noremap <leader>f :Files<cr>
+noremap <leader><leader> :Files<cr>
 noremap <leader>b :Buffers<cr>
 noremap <leader>c :Commits<cr>
 

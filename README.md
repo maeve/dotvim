@@ -44,3 +44,4 @@ For OS X.
 * Color scheme: [vim-vividchalk](https://github.com/tpope/vim-vividchalk)
 * Linting: [neomake](https://github.com/neomake/neomake)
 * Terminal goodies: [neoterm](https://github.com/kassio/neoterm)
+* Surroundings: [vim-surround](https://github.com/tpope/vim-surround)
