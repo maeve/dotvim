@@ -43,3 +43,4 @@ For OS X.
 * Rails: [vim-rails](https://github.com/tpope/vim-rails)
 * Color scheme: [vim-vividchalk](https://github.com/tpope/vim-vividchalk)
 * Linting: [neomake](https://github.com/neomake/neomake)
+* Terminal goodies: [neoterm](https://github.com/kassio/neoterm)

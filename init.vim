@@ -32,6 +32,10 @@ Plug 'tpope/vim-rails'
 " colors
 Plug 'tpope/vim-vividchalk'
 
+" terminal goodies
+Plug 'kassio/neoterm'
+let g:neoterm_repl_ruby = 'pry'
+
 call plug#end()
 
 "
@@ -47,13 +51,12 @@ set ruler " display cursor position in status bar
 set textwidth=0 " disable automatic wrapping in insert mode
 set nowrap " disable automatic wrapping in view mode
 
-" quiet please
-set visualbell
+set visualbell " quiet please
 
 " colors
 colorscheme vividchalk
 
-" show unwanted whitespace chars
+" show tab chars and trailing spaces
 set listchars=tab:▷⋅,trail:·
 set list
 
@@ -69,17 +72,37 @@ set shiftwidth=2 " indents (e.g. with '>') are two spaces
 let mapleader=","
 
 " fuzzy find
-map <leader>f :Files<cr>
-map <leader>b :Buffers<cr>
-map <leader>c :Commits<cr>
+noremap <leader>f :Files<cr>
+noremap <leader>b :Buffers<cr>
+noremap <leader>c :Commits<cr>
 
 " split window navigation
-nmap <leader><up> <c-w>k
-nmap <leader><down> <c-w>j
-nmap <leader><left> <c-w>h
-nmap <leader><right> <c-w>l
+nnoremap <leader><left> <c-w>h
+nnoremap <leader><down> <c-w>j
+nnoremap <leader><up> <c-w>k
+nnoremap <leader><right> <c-w>l
+
+tnoremap <leader><left> <c-\><c-n><c-w>h
+tnoremap <leader><down> <c-\><c-n><c-w>j
+tnoremap <leader><up> <c-\><c-n><c-w>k
+tnoremap <leader><right> <c-\><c-n><c-w>l
 
 " file explorer
-map <leader>d :e.<cr>
-map <leader>dx :Sexplore<cr>
-map <leader>dv :Vexplore<cr>
+noremap <leader>d :e.<cr>
+noremap <leader>dx :Sexplore<cr>
+noremap <leader>dv :Vexplore<cr>
+
+" terminal
+
+" exit terminal mode
+tnoremap <esc> <c-\><c-n>
+" show/hide last open terminal
+nnoremap <leader>tl :Ttoggle<cr>
+" clear terminal
+nnoremap <leader>tc :call neoterm#clear()<cr>
+" kills the current job (send a <c-c>)
+nnoremap <leader>tq :call neoterm#kill()<cr>
+" repl support
+nnoremap <leader>tf :TREPLSendFile<cr>
+nnoremap <leader>ts :TREPLSendLine<cr>
+vnoremap <leader>ts :TREPLSendSelection<cr>
