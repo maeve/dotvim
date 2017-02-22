@@ -1,8 +1,8 @@
-# Nvim
+# Dotvim
 
-This is my neovim configuration. There are many like it, but this one is mine.
+This is my vim configuration. There are many like it, but this one is mine.
 
-Tailored for Rails development on OS X.
+Tailored for Rails development using neovim on OS X.
 
 ## Installation
 
@@ -15,6 +15,7 @@ Tailored for Rails development on OS X.
 
 2. Open `nvim` and run `:CheckHealth`. Do whatever it tells you to do.
    (mostly installing the neovim plugin into your pythons and rubies)
+
 3. Install [vim-plug](https://github.com/junegunn/vim-plug):
     ```console
     curl -fLo ~/.local/share/nvim/site/autoload/plug.vim --create-dirs \
@@ -26,8 +27,20 @@ Tailored for Rails development on OS X.
     brew install ripgrep
     ```
 
-Although not strictly necessary to use this vim config, I use
-[iterm2](https://www.iterm2.com/) with some bells and whistles installed.
+5. Use one of the [nerd-fonts](https://github.com/ryanoasis/nerd-fonts) to get the
+   powerline symbols:
+    ```console
+    brew tap caskroom/fonts
+    brew cask install font-hack-nerd-font
+    ```
+
+   To see the full list of patched fonts available:
+    ```console
+    brew cask search nerd-font
+    ```
+
+Although not strictly necessary to use this vim config, I prefer to use neovim with
+[iterm2](https://www.iterm2.com/).
 
 1. Install iterm2:
     ```console
@@ -40,26 +53,20 @@ Although not strictly necessary to use this vim config, I use
     git clone https://github.com/chriskempson/base16-iterm2.git ~/base16-iterm2
     ```
 
-3. Open iterm2 and do the following:
+3. Set the colors in iterm2:
     1. Go to Preferences > Profiles > Colors
     2. Click on Color Presets > Import and import your theme
     3. Click on Load Presets and select your theme
 
-4. Install the patched [powerline fonts](https://github.com/powerline/fonts):
-    ```console
-    git clone https://github.com/powerline/fonts.git ~/powerline-fonts
-    ~/powerline-fonts/install.sh
-    ```
-
-5. In iterm2, set the default font to a powerline version:
+4. Set the font in iterm2:
     1. Go to Preferences > Profiles > Text
-    2. Click on Change Font and select one that ends with *for Powerline*
+    2. Click on Change Font and select the nerd-font you installed (e.g. hack)
 
 ### Configuration
 
 1. Clone this repo into your neovim config location:
     ```console
-    git clone git@github.com:maeve/nvim.git ~/.config/nvim
+    git clone git@github.com:maeve/dotvim.git ~/.config/nvim
     ```
 
 2. Open `nvim` and run `:PlugInstall`
