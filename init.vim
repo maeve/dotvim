@@ -110,9 +110,9 @@ tnoremap <leader><up> <c-\><c-n><c-w>k
 tnoremap <leader><right> <c-\><c-n><c-w>l
 
 " file explorer
-noremap <leader>d :e.<cr>
-noremap <leader>dx :Sexplore<cr>
-noremap <leader>dv :Vexplore<cr>
+noremap <leader>ff :e.<cr>
+noremap <leader>fx :Sexplore<cr>
+noremap <leader>fv :Vexplore<cr>
 
 " terminal
 
