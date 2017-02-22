@@ -30,7 +30,7 @@ autocmd! BufWritePost * Neomake " run on every save
 Plug 'tpope/vim-rails'
 
 " colors
-Plug 'tpope/vim-vividchalk'
+Plug 'chriskempson/base16-vim'
 
 " terminal goodies
 Plug 'kassio/neoterm'
@@ -45,6 +45,14 @@ Plug 'tpope/vim-endwise'
 " auto-close paired punctuation (brackets, parens, quotes)
 Plug 'jiangmiao/auto-pairs'
 
+" status line
+Plug 'vim-airline/vim-airline'
+Plug 'vim-airline/vim-airline-themes'
+let g:airline_theme='base16'
+
+" Show git diff (+/-) in the gutter
+Plug 'airblade/vim-gitgutter'
+
 call plug#end()
 
 "
@@ -53,8 +61,7 @@ call plug#end()
 
 " line numbers
 set number " display in the left gutter
-set numberwidth=4 " width of left gutter
-set ruler " display cursor position in status bar
+set numberwidth=3 " width of line number gutter
 
 " wrapping
 set textwidth=0 " disable automatic wrapping in insert mode
@@ -63,7 +70,7 @@ set nowrap " disable automatic wrapping in view mode
 set visualbell " quiet please
 
 " colors
-colorscheme vividchalk
+colorscheme base16-default-dark
 
 " show tab chars and trailing spaces
 set listchars=tab:▷⋅,trail:·
@@ -75,6 +82,8 @@ set softtabstop=2 " number of spaces that pressing tab counts for
 set expandtab " only insert spaces, never tab chars
 set shiftwidth=2 " indents (e.g. with '>') are two spaces
 
+" make plugins like vim-gitgutter snappy
+set updatetime=250 " ms after typing stops before writing swap file
 "
 " Bindings
 "

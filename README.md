@@ -12,7 +12,7 @@ For OS X.
     ```console
     brew install neovim/neovim/neovim
     ```
-    
+
 2. Open `nvim` and run `:CheckHealth`. Do whatever it tells you to do.
    (mostly installing the neovim plugin into your pythons and rubies)
 3. Install [vim-plug](https://github.com/junegunn/vim-plug):
@@ -20,19 +20,19 @@ For OS X.
     curl -fLo ~/.local/share/nvim/site/autoload/plug.vim --create-dirs \
       https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
     ```
-    
+
 4. Install [ripgrep](https://github.com/BurntSushi/ripgrep):
     ```console
     brew install ripgrep
     ```
-    
+
 ### Configuration
 
 1. Clone this repo into your neovim config location:
     ```console
-    git clone git@github.com:maeve/dotvim.git ~/.config/nvim
+    git clone git@github.com:maeve/nvim.git ~/.config/nvim
     ```
-    
+
 2. Open `nvim` and run `:PlugInstall`
 
 ## Plugins
@@ -41,9 +41,11 @@ For OS X.
 * File explorer: [netrw](http://www.vim.org/scripts/script.php?script_id=1075) with [vim-vinegar](https://github.com/tpope/vim-vinegar)
 * Git: [vim-fugitive](https://github.com/tpope/vim-fugitive)
 * Rails: [vim-rails](https://github.com/tpope/vim-rails)
-* Color scheme: [vim-vividchalk](https://github.com/tpope/vim-vividchalk)
+* Color scheme: [base16-vim](https://github.com/chriskempson/base16-vim)
 * Linting: [neomake](https://github.com/neomake/neomake)
 * Terminal goodies: [neoterm](https://github.com/kassio/neoterm)
 * Surroundings: [vim-surround](https://github.com/tpope/vim-surround)
 * Auto-close programming constructs: [vim-endwise](https://github.com/tpope/vim/endwise)
 * Auto-close paired punctuation: [auto-pairs](https://github.com/jiangmiao/auto-pairs)
+* Status line: [vim-airline](https://github.com/vim-airline/vim-airline) with [vim-airline-themes](https://github.com/vim-airline/vim-airline-themes)
+* Display git diff in gutter: [vim-gitgutter](https://github.com/airblade/vim-gitgutter)
