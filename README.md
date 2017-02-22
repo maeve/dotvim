@@ -1,10 +1,10 @@
-# Dotvim
+# Nvim
 
-This is my vim configuration. There are many like it, but this one is mine.
+This is my neovim configuration. There are many like it, but this one is mine.
+
+Tailored for Rails development on OS X.
 
 ## Installation
-
-For OS X.
 
 ### Prerequisites
 
@@ -25,6 +25,35 @@ For OS X.
     ```console
     brew install ripgrep
     ```
+
+Although not strictly necessary to use this vim config, I use
+[iterm2](https://www.iterm2.com/) with some bells and whistles installed.
+
+1. Install iterm2:
+    ```console
+    brew cask install iterm2
+    ```
+
+2. Clone the [base16-iterm2](https://github.com/chriskempson/base16-iterm2)
+   color presets:
+    ```console
+    git clone https://github.com/chriskempson/base16-iterm2.git ~/base16-iterm2
+    ```
+
+3. Open iterm2 and do the following:
+    1. Go to Preferences > Profiles > Colors
+    2. Click on Color Presets > Import and import your theme
+    3. Click on Load Presets and select your theme
+
+4. Install the patched [powerline fonts](https://github.com/powerline/fonts):
+    ```console
+    git clone https://github.com/powerline/fonts.git ~/powerline-fonts
+    ~/powerline-fonts/install.sh
+    ```
+
+5. In iterm2, set the default font to a powerline version:
+    1. Go to Preferences > Profiles > Text
+    2. Click on Change Font and select one that ends with *for Powerline*
 
 ### Configuration
 

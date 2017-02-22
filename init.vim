@@ -21,13 +21,15 @@ let g:netrw_liststyle = 3
 
 " git
 Plug 'tpope/vim-fugitive'
+Plug 'airblade/vim-gitgutter'
 
 " linting
 Plug 'neomake/neomake'
 autocmd! BufWritePost * Neomake " run on every save
 
-" rails
+" ruby/rails development
 Plug 'tpope/vim-rails'
+Plug 'vim-ruby/vim-ruby'
 
 " colors
 Plug 'chriskempson/base16-vim'
@@ -47,11 +49,10 @@ Plug 'jiangmiao/auto-pairs'
 
 " status line
 Plug 'vim-airline/vim-airline'
+let g:airline_powerline_fonts=1
+
 Plug 'vim-airline/vim-airline-themes'
 let g:airline_theme='base16'
-
-" Show git diff (+/-) in the gutter
-Plug 'airblade/vim-gitgutter'
 
 call plug#end()
 
@@ -84,10 +85,13 @@ set shiftwidth=2 " indents (e.g. with '>') are two spaces
 
 " make plugins like vim-gitgutter snappy
 set updatetime=250 " ms after typing stops before writing swap file
+
+let mapleader=","
+let maplocalleader="\\"
+
 "
 " Bindings
 "
-let mapleader=","
 
 " fuzzy find
 noremap <leader><leader> :Files<cr>
@@ -124,3 +128,6 @@ nnoremap <leader>tq :call neoterm#kill()<cr>
 nnoremap <leader>tf :TREPLSendFile<cr>
 nnoremap <leader>te :TREPLSendLine<cr>
 vnoremap <leader>te :TREPLSendSelection<cr>
+
+" remove trailing spaces
+nnoremap <leader>W :%s/\s\+$//<cr>:let @/=''<cr>
