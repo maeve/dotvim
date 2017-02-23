@@ -80,6 +80,7 @@ set nowrap " disable automatic wrapping in view mode
 set visualbell " quiet please
 
 " colors
+set background=dark
 colorscheme base16-tomorrow-night
 
 " show tab chars and trailing spaces
