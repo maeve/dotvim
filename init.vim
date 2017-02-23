@@ -54,6 +54,15 @@ let g:airline_powerline_fonts=1
 Plug 'vim-airline/vim-airline-themes'
 let g:airline_theme='base16'
 
+" markdown live preview
+function! BuildComposer(info)
+  if a:info.status != 'unchanged' || a:info.force
+    !cargo build --release
+  endif
+endfunction
+
+Plug 'euclio/vim-markdown-composer', { 'do': function('BuildComposer') }
+
 call plug#end()
 
 "
@@ -71,7 +80,7 @@ set nowrap " disable automatic wrapping in view mode
 set visualbell " quiet please
 
 " colors
-colorscheme base16-default-dark
+colorscheme base16-tomorrow-night
 
 " show tab chars and trailing spaces
 set listchars=tab:▷⋅,trail:·
@@ -131,3 +140,6 @@ vnoremap <leader>te :TREPLSendSelection<cr>
 
 " remove trailing spaces
 nnoremap <leader>W :%s/\s\+$//<cr>:let @/=''<cr>
+
+" git status
+nnoremap <leader>g :Gstatus<cr>
