@@ -63,6 +63,9 @@ endfunction
 
 Plug 'euclio/vim-markdown-composer', { 'do': function('BuildComposer') }
 
+" coffeescript support
+Plug 'kchmck/vim-coffee-script'
+
 call plug#end()
 
 "
