@@ -99,6 +99,10 @@ set shiftwidth=2 " indents (e.g. with '>') are two spaces
 " make plugins like vim-gitgutter snappy
 set updatetime=250 " ms after typing stops before writing swap file
 
+" split windows
+set splitbelow " open horizontal split below current window
+set splitright " open vertical split to right of current window
+
 let mapleader=","
 let maplocalleader="\\"
 
@@ -121,6 +125,9 @@ tnoremap <leader><left> <c-\><c-n><c-w>h
 tnoremap <leader><down> <c-\><c-n><c-w>j
 tnoremap <leader><up> <c-\><c-n><c-w>k
 tnoremap <leader><right> <c-\><c-n><c-w>l
+
+nnoremap <leader>x :sp<cr>
+nnoremap <leader>v :vsp<cr>
 
 " file explorer
 noremap <leader>ff :e.<cr>
