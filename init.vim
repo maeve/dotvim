@@ -103,6 +103,16 @@ set updatetime=250 " ms after typing stops before writing swap file
 set splitbelow " open horizontal split below current window
 set splitright " open vertical split to right of current window
 
+" shared clipboard
+if has("clipboard")
+  set clipboard=unnamed " copy to the system clipboard
+
+  if has("unnamedplus") " X11 support
+    set clipboard+=unnamedplus
+  endif
+endif
+
+" leaders
 let mapleader=","
 let maplocalleader="\\"
 
