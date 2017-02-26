@@ -151,7 +151,7 @@ tnoremap <esc> <c-\><c-n>
 " show/hide last open terminal
 nnoremap <leader>ts :Ttoggle<cr>
 " clear terminal
-nnoremap <leader>tc :call neoterm#clear()<cr>
+nnoremap <leader>tk :call neoterm#clear()<cr>
 " kills the current job (send a <c-c>)
 nnoremap <leader>tq :call neoterm#kill()<cr>
 " repl support
