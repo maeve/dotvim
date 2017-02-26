@@ -17,7 +17,7 @@ command! -bang -nargs=* Rg
 
 " file explorer
 Plug 'tpope/vim-vinegar'
-let g:netrw_liststyle = 3
+let g:netrw_liststyle=0 " thin
 
 " git
 Plug 'tpope/vim-fugitive'
@@ -131,8 +131,8 @@ nnoremap <leader>v :vsp<cr>
 
 " file explorer
 noremap <leader>ff :e.<cr>
-noremap <leader>fx :Sexplore<cr>
-noremap <leader>fv :Vexplore<cr>
+nmap <leader>fx <Plug>VinegarSplitUp
+nmap <leader>fv <Plug>VinegarVerticalSplitUp
 
 " terminal
 
