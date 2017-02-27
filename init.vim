@@ -66,6 +66,9 @@ Plug 'euclio/vim-markdown-composer', { 'do': function('BuildComposer') }
 " coffeescript support
 Plug 'kchmck/vim-coffee-script'
 
+" testing support
+Plug 'janko-m/vim-test'
+
 call plug#end()
 
 "
@@ -155,7 +158,7 @@ nnoremap <leader>tk :call neoterm#clear()<cr>
 " kills the current job (send a <c-c>)
 nnoremap <leader>tq :call neoterm#kill()<cr>
 " repl support
-nnoremap <leader>tf :TREPLSendFile<cr>
+nnoremap <leader>tE :TREPLSendFile<cr>
 nnoremap <leader>te :TREPLSendLine<cr>
 vnoremap <leader>te :TREPLSendSelection<cr>
 
@@ -164,3 +167,10 @@ nnoremap <leader>W :%s/\s\+$//<cr>:let @/=''<cr>
 
 " git status
 nnoremap <leader>g :Gstatus<cr>
+
+" testing
+nnoremap <leader>Tt :TestNearest<CR>
+nnoremap <leader>TT :TestFile<CR>
+nnoremap <leader>Ta :TestSuite<CR>
+nnoremap <leader>Tl :TestLast<CR>
+nnoremap <leader>Tg :TestVisit<CR>
