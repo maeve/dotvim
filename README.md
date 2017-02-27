@@ -101,3 +101,4 @@ For OS X using [homebrew](https://brew.sh/).
 * Display git diff in gutter: [vim-gitgutter](https://github.com/airblade/vim-gitgutter)
 * Live markdown preview: [vim-markdown-composer](https://github.com/euclio/vim-markdown-composer)
 * Coffeescript: [vim-coffee-script](https://github.com/kchmck/vim-coffee-script)
+* Test support: [vim-test](https://github.com/janko-m/vim-test)

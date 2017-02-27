@@ -68,6 +68,7 @@ Plug 'kchmck/vim-coffee-script'
 
 " testing support
 Plug 'janko-m/vim-test'
+let test#strategy = "neoterm" " execute test commands with neoterm
 
 call plug#end()
 
@@ -169,8 +170,11 @@ nnoremap <leader>W :%s/\s\+$//<cr>:let @/=''<cr>
 nnoremap <leader>g :Gstatus<cr>
 
 " testing
-nnoremap <leader>Tt :TestNearest<CR>
-nnoremap <leader>TT :TestFile<CR>
-nnoremap <leader>Ta :TestSuite<CR>
-nnoremap <leader>Tl :TestLast<CR>
-nnoremap <leader>Tg :TestVisit<CR>
+nnoremap <leader>Tt :TestNearest<cr>
+nnoremap <leader>TT :TestFile<cr>
+nnoremap <leader>Ta :TestSuite<cr>
+nnoremap <leader>Tl :TestLast<cr>
+nnoremap <leader>Tg :TestVisit<cr>
+
+" clear highlighting
+nnoremap <leader>k :noh<cr>
