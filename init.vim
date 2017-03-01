@@ -177,7 +177,7 @@ nnoremap <leader>g :Gstatus<cr>
 
 " testing
 nnoremap <leader>r :TestNearest<cr>
-nnoremap <leader>R :TestSuite<cr>
+nnoremap <leader>R :TestFile<cr>
 nnoremap <leader>l :TestLast<cr>
 
 " clear highlighting
