@@ -73,6 +73,9 @@ let test#strategy = "neoterm" " execute test commands with neoterm
 " syntax highlighting for liquid templates
 Plug 'tpope/vim-liquid'
 
+" vertical alignment on things like = signs
+Plug 'junegunn/vim-easy-align'
+
 call plug#end()
 
 "
@@ -179,3 +182,9 @@ nnoremap <leader>l :TestLast<cr>
 
 " clear highlighting
 nnoremap <leader>k :noh<cr>
+
+" Start interactive EasyAlign in visual mode (e.g. vipga)
+xmap ga <Plug>(EasyAlign)
+
+" Start interactive EasyAlign for a motion/text object (e.g. gaip)
+nmap ga <Plug>(EasyAlign)
