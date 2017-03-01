@@ -94,7 +94,10 @@ set visualbell " quiet please
 
 " colors
 set background=dark
-colorscheme base16-tomorrow-night
+if filereadable(expand('~/.vimrc_background'))
+  let base16colorspace=256
+  source ~/.vimrc_background
+endif
 
 " show tab chars and trailing spaces
 set listchars=tab:▷⋅,trail:·
