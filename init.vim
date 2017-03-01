@@ -70,6 +70,9 @@ Plug 'kchmck/vim-coffee-script'
 Plug 'janko-m/vim-test'
 let test#strategy = "neoterm" " execute test commands with neoterm
 
+" syntax highlighting for liquid templates
+Plug 'tpope/vim-liquid'
+
 call plug#end()
 
 "
@@ -170,11 +173,9 @@ nnoremap <leader>W :%s/\s\+$//<cr>:let @/=''<cr>
 nnoremap <leader>g :Gstatus<cr>
 
 " testing
-nnoremap <leader>Tt :TestNearest<cr>
-nnoremap <leader>TT :TestFile<cr>
-nnoremap <leader>Ta :TestSuite<cr>
-nnoremap <leader>Tl :TestLast<cr>
-nnoremap <leader>Tg :TestVisit<cr>
+nnoremap <leader>r :TestNearest<cr>
+nnoremap <leader>R :TestSuite<cr>
+nnoremap <leader>l :TestLast<cr>
 
 " clear highlighting
 nnoremap <leader>k :noh<cr>
