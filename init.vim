@@ -191,3 +191,6 @@ xmap ga <Plug>(EasyAlign)
 
 " Start interactive EasyAlign for a motion/text object (e.g. gaip)
 nmap ga <Plug>(EasyAlign)
+
+" rails
+nnoremap <leader>c :T bundle exec rails console<cr>
