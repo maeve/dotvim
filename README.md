@@ -44,6 +44,12 @@ For OS X using [homebrew](https://brew.sh/).
     brew cask install iterm2
     ```
 
+1. Install [highlight](http://www.andre-simon.de/doku/highlight/en/highlight.php):
+
+    ```bash
+    brew install highlight
+    ```
+
 ### Fonts
 
 1. Use one of the [nerd-fonts](https://github.com/ryanoasis/nerd-fonts) to get the
