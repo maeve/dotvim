@@ -195,3 +195,4 @@ nmap ga <Plug>(EasyAlign)
 
 " rails
 nnoremap <leader>c :T bundle exec rails console<cr>
+nnoremap <leader>b :T bundle<cr>
