@@ -77,6 +77,9 @@ Plug 'tpope/vim-liquid'
 " vertical alignment on things like = signs
 Plug 'junegunn/vim-easy-align'
 
+" buffer management
+Plug 'jlanzarotta/bufexplorer'
+
 call plug#end()
 
 "
@@ -136,7 +139,7 @@ let maplocalleader="\\"
 
 " fuzzy find
 noremap <leader><leader> :Files<cr>
-noremap <leader>b :Buffers<cr>
+noremap <leader>bb :Buffers<cr>
 noremap <leader>c :Commits<cr>
 
 " split window navigation
@@ -195,4 +198,4 @@ nmap ga <Plug>(EasyAlign)
 
 " rails
 nnoremap <leader>c :T bundle exec rails console<cr>
-nnoremap <leader>b :T bundle<cr>
+nnoremap <leader>b :T bundle install<cr>

@@ -129,3 +129,4 @@ For OS X using [homebrew](https://brew.sh/).
 * Test support: [vim-test](https://github.com/janko-m/vim-test)
 * Liquid support: [vim-liquid](https://github.com/tpope/vim-liquid)
 * Vertically align code: [vim-easy-align](https://github.com/junegunn/vim-easy-align)
+* Buffer management: [bufexplorer](https://github.com/jlanzarotta/bufexplorer)
