@@ -80,6 +80,9 @@ Plug 'junegunn/vim-easy-align'
 " buffer management
 Plug 'jlanzarotta/bufexplorer'
 
+" killring/yank history
+Plug 'bfredl/nvim-miniyank'
+
 call plug#end()
 
 "
@@ -199,3 +202,17 @@ nmap ga <Plug>(EasyAlign)
 " rails
 nnoremap <leader>c :T bundle exec rails console<cr>
 nnoremap <leader>b :T bundle install<cr>
+
+" killring/yank history
+
+" ignore shared clipboard and only paste from history in vim
+map <leader>p <Plug>(miniyank-startput)
+map <leader>P <Plug>(miniyank-startPut)
+
+" first paste from shared clipboard, and then you can cycle back
+" into vim history
+map p <Plug>(miniyank-autoput)
+map P <Plug>(miniyank-autoPut)
+
+" cycle backwards through yank history
+map <leader>n <Plug>(miniyank-cycle)
