@@ -32,6 +32,12 @@ For OS X using [homebrew](https://brew.sh/).
     brew install ripgrep
     ```
 
+1. Add the following to your .bashrc:
+
+    ```bash
+    export FZF_DEFAULT_COMMAND='rg --files --no-ignore --hidden --follow --glob "!.git/*"'
+    ```
+
 1. Install [rust](https://rust-lang.org):
 
     ```bash
