@@ -23,6 +23,7 @@ let g:netrw_liststyle=0 " thin
 
 " git
 Plug 'tpope/vim-fugitive'
+
 Plug 'airblade/vim-gitgutter'
 
 " linting
@@ -123,6 +124,7 @@ set updatetime=250 " ms after typing stops before writing swap file
 " split windows
 set splitbelow " open horizontal split below current window
 set splitright " open vertical split to right of current window
+set diffopt+=vertical " default diff to vertical split
 
 " shared clipboard
 if has("clipboard")
