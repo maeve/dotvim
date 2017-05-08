@@ -209,9 +209,6 @@ nnoremap <leader>r :TestNearest<cr>
 nnoremap <leader>R :TestFile<cr>
 nnoremap <leader>l :TestLast<cr>
 
-" clear highlighting
-nnoremap <leader>k :noh<cr>
-
 " Start interactive EasyAlign in visual mode (e.g. vipga)
 xmap ga <Plug>(EasyAlign)
 
