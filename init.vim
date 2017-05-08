@@ -207,7 +207,6 @@ nnoremap <leader>g :Gstatus<cr>
 " testing
 nnoremap <leader>r :TestNearest<cr>
 nnoremap <leader>R :TestFile<cr>
-nnoremap <leader>l :TestLast<cr>
 
 " Start interactive EasyAlign in visual mode (e.g. vipga)
 xmap ga <Plug>(EasyAlign)
