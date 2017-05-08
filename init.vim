@@ -233,6 +233,10 @@ map P <Plug>(miniyank-autoPut)
 " cycle backwards through yank history
 map <leader>n <Plug>(miniyank-cycle)
 
+" Diff shortcuts
+nnoremap <leader>dg :diffget<cr>
+nnoremap <leader>dp :diffput<cr>
+
 " shortcuts for :Gdiff 3-way merge
 nnoremap <leader>d2 :diffget //2<cr>
 nnoremap <leader>d3 :diffget //3<cr>
