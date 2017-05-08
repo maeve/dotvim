@@ -54,6 +54,12 @@ Plug 'jiangmiao/auto-pairs'
 Plug 'vim-airline/vim-airline'
 let g:airline_powerline_fonts=1
 
+" display buffer number in status line
+let g:airline_section_c =
+      \"%{bufnr('%')}: ".
+      \"%<%f%m %#__accent_red#".
+      \"%{airline#util#wrap(airline#parts#readonly(),0)}%#__restore__#"
+
 Plug 'vim-airline/vim-airline-themes'
 let g:airline_theme='base16'
 
@@ -90,6 +96,11 @@ call plug#end()
 "
 " Global
 "
+
+" autoread filesystem changes
+" (sort of, see https://github.com/neovim/neovim/issues/1936)
+set autoread
+au FocusGained * :checktime
 
 " line numbers
 set number " display in the left gutter
@@ -149,15 +160,20 @@ noremap <leader>bb :Buffers<cr>
 noremap <leader>c :Commits<cr>
 
 " split window navigation
-nnoremap <leader><left> <c-w>h
-nnoremap <leader><down> <c-w>j
-nnoremap <leader><up> <c-w>k
-nnoremap <leader><right> <c-w>l
+nnoremap <leader>h <c-w>h
+nnoremap <leader>j <c-w>j
+nnoremap <leader>k <c-w>k
+nnoremap <leader>l <c-w>l
 
-tnoremap <leader><left> <c-\><c-n><c-w>h
-tnoremap <leader><down> <c-\><c-n><c-w>j
-tnoremap <leader><up> <c-\><c-n><c-w>k
-tnoremap <leader><right> <c-\><c-n><c-w>l
+tnoremap <leader>h <c-\><c-n><c-w>h
+tnoremap <leader>j <c-\><c-n><c-w>j
+tnoremap <leader>k <c-\><c-n><c-w>k
+tnoremap <leader>l <c-\><c-n><c-w>l
+
+noremap <left> <nop>
+noremap <down> <nop>
+noremap <up> <nop>
+noremap <right> <nop>
 
 nnoremap <leader>x :sp<cr>
 nnoremap <leader>v :vsp<cr>
@@ -219,3 +235,7 @@ map P <Plug>(miniyank-autoPut)
 
 " cycle backwards through yank history
 map <leader>n <Plug>(miniyank-cycle)
+
+" shortcuts for :Gdiff 3-way merge
+nnoremap <leader>d2 :diffget //2<cr>
+nnoremap <leader>d3 :diffget //3<cr>
