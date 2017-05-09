@@ -148,3 +148,4 @@ For OS X using [homebrew](https://brew.sh/).
 * Vertically align code: [vim-easy-align](https://github.com/junegunn/vim-easy-align)
 * Buffer management: [bufexplorer](https://github.com/jlanzarotta/bufexplorer)
 * Killring/yank history: [nvim-miniyank](https://github.com/bfredl/nvim-miniyank)
+* Code comments: [vim-commentary](https://github.com/tpope/vim-commentary)

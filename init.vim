@@ -91,6 +91,9 @@ Plug 'jlanzarotta/bufexplorer'
 " killring/yank history
 Plug 'bfredl/nvim-miniyank'
 
+" code comments
+Plug 'tpope/vim-commentary'
+
 call plug#end()
 
 "
