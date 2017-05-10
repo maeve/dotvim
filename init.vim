@@ -173,6 +173,13 @@ tnoremap <leader>j <c-\><c-n><c-w>j
 tnoremap <leader>k <c-\><c-n><c-w>k
 tnoremap <leader>l <c-\><c-n><c-w>l
 
+" Home row navigation in terminal mode
+tnoremap <c-h> <left>
+tnoremap <c-j> <down>
+tnoremap <c-k> <up>
+tnoremap <c-l> <down>
+
+" Disable arrow keys to force hjkl usage
 noremap <left> <nop>
 noremap <down> <nop>
 noremap <up> <nop>
