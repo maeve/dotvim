@@ -94,6 +94,9 @@ Plug 'bfredl/nvim-miniyank'
 " code comments
 Plug 'tpope/vim-commentary'
 
+" readline style insertion
+Plug 'tpope/vim-rsi'
+
 call plug#end()
 
 "

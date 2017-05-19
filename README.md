@@ -84,8 +84,9 @@ For OS X using [homebrew](https://brew.sh/).
     ```
 
 1. Set the font in iterm2:
-  1. Go to Preferences > Profiles > Text
-  1. Click on Change Font and select the nerd-font you installed (e.g. hack)
+
+    1. Go to Preferences > Profiles > Text
+    1. Click on Change Font and select the nerd-font you installed (e.g. hack)
 
 ### Colors
 
@@ -99,9 +100,10 @@ For OS X using [homebrew](https://brew.sh/).
     ```
 
 1. Set the colors in iterm2:
-  1. Go to Preferences > Profiles > Colors
-  1. Click on Color Presets > Import and import your theme
-  1. Click on Load Presets and select your theme
+
+    1. Go to Preferences > Profiles > Colors
+    1. Click on Color Presets > Import and import your theme
+    1. Click on Load Presets and select your theme
 
 1. To enable base16 color schemes in the 256 colorspace, add the following to
    your `.bashrc`:
@@ -149,3 +151,4 @@ For OS X using [homebrew](https://brew.sh/).
 * Buffer management: [bufexplorer](https://github.com/jlanzarotta/bufexplorer)
 * Killring/yank history: [nvim-miniyank](https://github.com/bfredl/nvim-miniyank)
 * Code comments: [vim-commentary](https://github.com/tpope/vim-commentary)
+* Readline syntax: [vim-rsi](https://github.com/tpope/vim-rsi)
