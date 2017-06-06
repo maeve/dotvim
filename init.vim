@@ -44,6 +44,9 @@ let g:neoterm_repl_ruby = 'pry'
 " change surroundings (brackets, parens, quotes, etc)
 Plug 'tpope/vim-surround'
 
+" toggle between different styles of ruby blocks ({} vs do/end)
+Plug 'jgdavey/vim-blockle'
+
 " auto-close code blocks
 Plug 'tpope/vim-endwise'
 
@@ -229,7 +232,6 @@ nmap ga <Plug>(EasyAlign)
 
 " rails
 nnoremap <leader>c :T bundle exec rails console<cr>
-nnoremap <leader>b :T bundle install<cr>
 
 " killring/yank history
 

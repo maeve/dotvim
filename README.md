@@ -152,3 +152,4 @@ For OS X using [homebrew](https://brew.sh/).
 * Killring/yank history: [nvim-miniyank](https://github.com/bfredl/nvim-miniyank)
 * Code comments: [vim-commentary](https://github.com/tpope/vim-commentary)
 * Readline syntax: [vim-rsi](https://github.com/tpope/vim-rsi)
+* Toggle between ruby block styles: [vim-blockle](https://github.com/jgdavey/vim-blockle)
