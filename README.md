@@ -133,7 +133,7 @@ For OS X using [homebrew](https://brew.sh/).
 
 * Fuzzy find: [fzf](https://github.com/junegunn/fzf) with [fzf.vim](https://github.com/junegunn/fzf.vim)
 * File explorer: [netrw](http://www.vim.org/scripts/script.php?script_id=1075) with [vim-vinegar](https://github.com/tpope/vim-vinegar)
-* Git: [vim-fugitive](https://github.com/tpope/vim-fugitive)
+* Git: [vim-fugitive](https://github.com/tpope/vim-fugitive) with [vim-rhubarb](https://github.com/tpope/vim-rhubarb)
 * Rails: [vim-rails](https://github.com/tpope/vim-rails)
 * Color schemes: [base16-vim](https://github.com/chriskempson/base16-vim)
 * Linting: [neomake](https://github.com/neomake/neomake)

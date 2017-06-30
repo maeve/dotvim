@@ -23,6 +23,7 @@ let g:netrw_liststyle=0 " thin
 
 " git
 Plug 'tpope/vim-fugitive'
+Plug 'tpope/vim-rhubarb'
 
 Plug 'airblade/vim-gitgutter'
 
