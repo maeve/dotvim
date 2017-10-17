@@ -101,6 +101,13 @@ Plug 'tpope/vim-commentary'
 " readline style insertion
 Plug 'tpope/vim-rsi'
 
+" python autocompletion
+Plug 'davidhalter/jedi-vim'
+let g:jedi#use_splits_not_buffers = 'left'
+
+" base64 support
+Plug 'christianrondeau/vim-base64'
+
 call plug#end()
 
 "

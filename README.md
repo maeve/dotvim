@@ -1,6 +1,6 @@
 # Dotvim
 
-This is my (neo)vim configuration. There are many like it, but this one is mine.
+This is my (neo)vim configuration. Insert obligatory Rifleman's Creed reference. Yadda yadda.
 
 Primarily for Rails development.
 
@@ -13,11 +13,11 @@ For OS X using [homebrew](https://brew.sh/).
 1. Install [neovim](https://github.com/neovim/neovim):
 
     ```bash
-    brew install neovim/neovim/neovim
+    brew install neovim
     ```
 
 1. Open `nvim` and run `:CheckHealth`. Do whatever it tells you to do.
-   (mostly installing the neovim plugin into your pythons and rubies)
+   (mostly installing the neovim plugin into various runtimes)
 
 1. Install [vim-plug](https://github.com/junegunn/vim-plug):
 
@@ -153,3 +153,5 @@ For OS X using [homebrew](https://brew.sh/).
 * Code comments: [vim-commentary](https://github.com/tpope/vim-commentary)
 * Readline syntax: [vim-rsi](https://github.com/tpope/vim-rsi)
 * Toggle between ruby block styles: [vim-blockle](https://github.com/jgdavey/vim-blockle)
+* Python autocompletion: [jedi-vim](https://github.com/davidhalter/jedi-vim)
+* Base64 support: [vim-base64](https://github.com/christianrondeau/vim-base64)
