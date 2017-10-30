@@ -108,6 +108,9 @@ let g:jedi#use_splits_not_buffers = 'left'
 " base64 support
 Plug 'christianrondeau/vim-base64'
 
+" go
+Plug 'fatih/vim-go', { 'do': ':GoInstallBinaries' }
+
 call plug#end()
 
 "
@@ -166,6 +169,20 @@ endif
 " leaders
 let mapleader=","
 let maplocalleader="\\"
+
+" go (shamelessly cargo-culted from @dpetersen)
+augroup golangstyle
+  autocmd!
+  autocmd FileType go set tabstop=2 shiftwidth=2 noexpandtab
+  autocmd FileType go noremap <leader>gt :GoTest <CR>
+  autocmd FileType go noremap <leader>gT :GoTestFunc <CR>
+  autocmd FileType go noremap <leader>gi :GoInfo <CR>
+
+  " rails.vim-inspired switch commands, stolen from vim-go docs
+  autocmd Filetype go command! -bang A call go#alternate#Switch(<bang>0, 'edit')
+  autocmd Filetype go command! -bang AV call go#alternate#Switch(<bang>0, 'vsplit')
+  autocmd Filetype go command! -bang AS call go#alternate#Switch(<bang>0, 'split')
+augroup END
 
 "
 " Bindings

@@ -155,3 +155,4 @@ For OS X using [homebrew](https://brew.sh/).
 * Toggle between ruby block styles: [vim-blockle](https://github.com/jgdavey/vim-blockle)
 * Python autocompletion: [jedi-vim](https://github.com/davidhalter/jedi-vim)
 * Base64 support: [vim-base64](https://github.com/christianrondeau/vim-base64)
+* Go: [vim-go](https://github.com/fatih/vim-go)
