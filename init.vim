@@ -126,6 +126,9 @@ au FocusGained * :checktime
 set number " display in the left gutter
 set numberwidth=3 " width of line number gutter
 
+" include additional context when scrolling
+set scrolloff=1
+
 " wrapping
 set textwidth=0 " disable automatic wrapping in insert mode
 set nowrap " disable automatic wrapping in view mode
