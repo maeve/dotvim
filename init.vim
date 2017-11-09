@@ -111,11 +111,17 @@ Plug 'christianrondeau/vim-base64'
 " go
 Plug 'fatih/vim-go', { 'do': ':GoInstallBinaries' }
 
+" disabling easy navigation (arrow keys, home row, etc)
+Plug 'wikitopian/hardmode'
+
 call plug#end()
 
 "
 " Global
 "
+
+" enable hard mode by default
+autocmd VimEnter,BufNewFile,BufReadPost * silent! call HardMode()
 
 " autoread filesystem changes
 " (sort of, see https://github.com/neovim/neovim/issues/1936)
@@ -213,12 +219,6 @@ tnoremap <c-j> <down>
 tnoremap <c-k> <up>
 tnoremap <c-l> <down>
 
-" Disable arrow keys to force hjkl usage
-noremap <left> <nop>
-noremap <down> <nop>
-noremap <up> <nop>
-noremap <right> <nop>
-
 nnoremap <leader>x :sp<cr>
 nnoremap <leader>v :vsp<cr>
 
@@ -282,3 +282,6 @@ nnoremap <leader>dp :diffput<cr>
 " shortcuts for :Gdiff 3-way merge
 nnoremap <leader>d2 :diffget //2<cr>
 nnoremap <leader>d3 :diffget //3<cr>
+
+" toggle hard mode navigation
+nnoremap <leader>h <esc>:call ToggleHardMode()<cr>
