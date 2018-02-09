@@ -110,6 +110,10 @@ Plug 'christianrondeau/vim-base64'
 
 " go
 Plug 'fatih/vim-go', { 'do': ':GoInstallBinaries' }
+let g:go_fmt_command = 'goimports'
+
+" paired mappings (e.g. cnext/cprevious)
+Plug 'tpope/vim-unimpaired'
 
 call plug#end()
 
@@ -173,13 +177,27 @@ endif
 let mapleader=","
 let maplocalleader="\\"
 
-" go (shamelessly cargo-culted from @dpetersen)
+" go
 augroup golangstyle
   autocmd!
   autocmd FileType go set tabstop=2 shiftwidth=2 noexpandtab
-  autocmd FileType go noremap <leader>gt :GoTest <CR>
-  autocmd FileType go noremap <leader>gT :GoTestFunc <CR>
-  autocmd FileType go noremap <leader>gi :GoInfo <CR>
+
+  " run :GoBuild or :GoTestCompile based on the go file
+  " ripped right out of https://github.com/fatih/vim-go-tutorial
+  function! s:build_go_files()
+    let l:file = expand('%')
+    if l:file =~# '^\f\+_test\.go$'
+      call go#test#Test(0, 1)
+    elseif l:file =~# '^\f\+\.go$'
+      call go#cmd#Build(0)
+    endif
+  endfunction
+
+  autocmd FileType go nmap <leader>gb :<C-u>call <SID>build_go_files()<CR>
+  autocmd FileType go nmap <leader>gr <Plug>(go-run)
+  autocmd FileType go nmap <leader>gt <Plug>(go-test)
+  autocmd FileType go nmap <leader>gT <Plug>(go-test-func)
+  autocmd FileType go nmap <leader>gc <Plug>(go-coverage-toggle)
 
   " rails.vim-inspired switch commands, stolen from vim-go docs
   autocmd Filetype go command! -bang A call go#alternate#Switch(<bang>0, 'edit')
@@ -194,7 +212,7 @@ augroup END
 " fuzzy find
 noremap <leader><leader> :Files<cr>
 noremap <leader>bb :Buffers<cr>
-noremap <leader>c :Commits<cr>
+noremap <leader>cc :Commits<cr>
 
 " split window navigation
 nnoremap <leader>h <c-w>h
@@ -252,9 +270,6 @@ xmap ga <Plug>(EasyAlign)
 " Start interactive EasyAlign for a motion/text object (e.g. gaip)
 nmap ga <Plug>(EasyAlign)
 
-" rails
-nnoremap <leader>c :T bundle exec rails console<cr>
-
 " killring/yank history
 
 " ignore shared clipboard and only paste from history in vim
@@ -277,6 +292,10 @@ nnoremap <leader>dp :diffput<cr>
 nnoremap <leader>d2 :diffget //2<cr>
 nnoremap <leader>d3 :diffget //3<cr>
 
+" list nav
+nnoremap <leader>qq :cclose<cr>
+nnoremap <leader>ql :lclose<cr>
+
 " no arrow keys
 noremap <left> <nop>
 noremap <down> <nop>
@@ -284,7 +303,7 @@ noremap <up> <nop>
 noremap <right> <nop>
 
 " no home row navigation
-noremap h <nop>
-noremap j <nop>
-noremap k <nop>
-noremap l <nop>
+" noremap h <nop>
+" noremap j <nop>
+" noremap k <nop>
+" noremap l <nop>

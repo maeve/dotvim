@@ -156,3 +156,4 @@ For OS X using [homebrew](https://brew.sh/).
 * Python autocompletion: [jedi-vim](https://github.com/davidhalter/jedi-vim)
 * Base64 support: [vim-base64](https://github.com/christianrondeau/vim-base64)
 * Go: [vim-go](https://github.com/fatih/vim-go)
+* Paired mappings: [vim-unimpaired](https://github.com/tpope/vim-unimpaired)
