@@ -1,5 +1,8 @@
 # Dotvim
 
+**THIS PROJECT IS NO LONGER MAINTAINED**. See [maeve/dotfiles](https://github.com/maeve/dotfiles)
+for my latest configuration.
+
 This is my (neo)vim configuration. Insert obligatory Rifleman's Creed reference. Yadda yadda.
 
 Primarily for Rails development.
